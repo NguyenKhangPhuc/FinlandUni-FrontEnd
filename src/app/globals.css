@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes horizon {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.link-pop-up {
+  animation: horizon 0.5s ease-in-out;
+}
+
+.input-pop-up {
+  animation: popUp 0.5s ease-in-out;
+}
+
+.header-pop-up {
+  animation: popUp 0.5s ease-in-out;
+}
+
+.link {
+  @apply text-white bg-indigo-800 p-2 rounded-md hover:bg-gray-700 hover:text-blue-300 duration-300 text-sm;
+}
+
+.header {
+  @apply text-white font-bold text-2xl;
+}
+
+.input {
+  @apply rounded-lg pl-5 transition-all duration-300 border border-indigo-300 focus:scale-105 focus:border-indigo-500;
 }
