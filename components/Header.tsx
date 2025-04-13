@@ -12,6 +12,15 @@ const Header = () => {
                 <Link href='/finland-overview' className="link link-pop-up">Giới thiệu</Link>
                 <Link href='/event' className="link link-pop-up">Sự kiện gần đây</Link>
             </div>
+            <div
+                className="header header-pop-up"
+            >
+                Danh sách đại học Phần Lan
+            </div>
+            <div
+                className="p-5 header-pop-up"
+            >Tìm thông tin về các trường đại học ở Phần Lan một cách dễ dàng
+            </div>
         </div>
     )
 }

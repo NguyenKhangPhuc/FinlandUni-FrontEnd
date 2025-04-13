@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
+// import ReduxProvider from "../../provider/ReduxProvider";
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import QueryProvider from "../../provider/QueryProvide";
+
 
 const roboto = Roboto({ subsets: ['latin'] })
 
@@ -16,13 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+
   return (
     <html lang="en">
       <body
-        className={roboto.className}
+        className={`${roboto.className} min-h-screen bg-black`}
       >
         <Header />
-        <main className="bg-black">{children}</main>
+        <QueryProvider><main >{children}</main></QueryProvider>
       </body>
     </html>
   );

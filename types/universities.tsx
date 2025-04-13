@@ -1,24 +1,24 @@
-export interface Admission {
-    entranceExam: string,
-    sat: string,
-}
+// export interface Admission {
+//     entranceExam: string,
+//     sat: string,
+// }
 
 
-export interface Major {
-    majorName: string,
-    degreeType: string,
-    duration: string,
-    applicationPeriod: string,
-    language: string,
-    field: string,
-    admission: Admission,
-    majorOverview: string,
-}
+// export interface Major {
+//     majorName: string,
+//     degreeType: string,
+//     duration: string,
+//     applicationPeriod: string,
+//     language: string,
+//     field: string,
+//     admission: Admission,
+//     majorOverview: string,
+// }
 
-interface Majors {
-    bachelor: Array<Major>,
-    master: Array<Major>,
-}
+// interface Majors {
+//     bachelor: Array<Major>,
+//     master: Array<Major>,
+// }
 
 export interface University {
     id: string,
@@ -26,10 +26,8 @@ export interface University {
     city: string,
     overview: string,
     ranking: string,
-    majors: Majors,
     tuition: string,
     scholarship: string,
-    entryRequirements: string,
     type: string,
     website: string,
 }
