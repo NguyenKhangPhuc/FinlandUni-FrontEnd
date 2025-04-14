@@ -5,6 +5,7 @@ import { useState } from "react";
 import usePageService from "../services/PageService";
 import UniversityPart from "./UniversityPart";
 import { University } from "../types/universities";
+import Paginations from "./Paginations";
 
 
 const ListUni = ({ universities }: { universities: Array<University> }) => {
@@ -58,31 +59,7 @@ const ListUni = ({ universities }: { universities: Array<University> }) => {
                     />
                 )
             })}
-            <div className="flex p-8 gap-2">
-                {totalPage && Array.from({ length: totalPage }, (_, i) => i + 1).map(page => {
-                    const isFirst = page == 1
-                    const isCurrent = page == receivedPage
-                    const isNearCurrent = Math.abs(page - receivedPage) == 1;
-                    const isLast = page == totalPage
-                    const isDot = page == receivedPage + 2 || page == receivedPage - 2
-                    console.log()
-                    if (isCurrent || isFirst || isNearCurrent || isLast && page > 0 && page <= totalPage) {
-                        return (
-                            <button
-                                key={`page ${page}`}
-                                onClick={() => handlePageChange(page)}
-                                className={`pagination ${page === receivedPage ? 'bg-gray-300 text-black' : 'bg-indigo-800'}`}
-                            >
-                                {page}
-                            </button>
-                        )
-                    } else if (isDot) {
-                        return (
-                            <div key={`dot ${page}`}>...</div>
-                        )
-                    }
-                })}
-            </div>
+            <Paginations totalPage={totalPage} receivedPage={receivedPage} handlePageChange={handlePageChange} />
         </>
     )
 }

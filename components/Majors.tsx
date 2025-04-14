@@ -1,6 +1,7 @@
 "use client"
 import usePageService from "../services/PageService"
 import { Major } from "../types/universities"
+import Paginations from "./Paginations"
 
 const Majors = ({ majors }: { majors: Array<Major> }) => {
     const { totalPage, receivedPage, handlePageChange, paginatedItems, handleQueryChange } = usePageService(majors)
@@ -52,31 +53,7 @@ const Majors = ({ majors }: { majors: Array<Major> }) => {
                     )
                 }
             })}
-            <div className=" flex p-3 gap-2 ">
-                {totalPage && Array.from({ length: totalPage }, (_, i) => i + 1).map(page => {
-                    const isFirst = page == 1
-                    const isCurrent = page == receivedPage
-                    const isNearCurrent = Math.abs(page - receivedPage) == 1;
-                    const isLast = page == totalPage
-                    const isDot = page == receivedPage + 2 || page == receivedPage - 2
-                    console.log()
-                    if (isCurrent || isFirst || isNearCurrent || isLast && page > 0 && page <= totalPage) {
-                        return (
-                            <button
-                                key={`page ${page}`}
-                                onClick={() => handlePageChange(page)}
-                                className={`pagination ${page === receivedPage ? 'bg-gray-300 text-black' : 'bg-indigo-800'}`}
-                            >
-                                {page}
-                            </button>
-                        )
-                    } else if (isDot) {
-                        return (
-                            <div key={`dot ${page}`}>...</div>
-                        )
-                    }
-                })}
-            </div>
+            <Paginations totalPage={totalPage} receivedPage={receivedPage} handlePageChange={handlePageChange} />
         </div >
     )
 }
