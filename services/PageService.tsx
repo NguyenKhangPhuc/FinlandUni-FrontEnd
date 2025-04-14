@@ -2,24 +2,28 @@
 import { useSearchParams } from "next/navigation"
 import { usePathname } from "next/navigation"
 import { useRouter } from "next/navigation"
-import { University } from "../types/universities"
+import { Major, University } from "../types/universities"
 import { useDebouncedCallback } from "use-debounce"
 
-const usePageService = (universities: Array<University> | undefined) => {
+const usePageService = (items: Array<University> | Array<Major> | undefined) => {
 
     const searchParams = useSearchParams()
     const pathname = usePathname()
     const router = useRouter()
     const query = searchParams.get('query') || ''
     const receivedPage = parseInt(searchParams.get('page') ?? '1', 10);
-    const uniPerPage = 4;
-    const filteredUniversities = universities?.filter((uni) => {
+    const itemsPerPage = 4;
+    const filteredItems = items?.filter((uni) => {
+        if ('name' in uni) {
+            return uni.name.toLowerCase().includes(query.toLowerCase())
+        } else {
+            return uni.major.toLowerCase().includes(query.toLowerCase())
+        }
 
-        return uni.name.toLowerCase().includes(query.toLowerCase())
     })
-    const start = (receivedPage - 1) * uniPerPage;
-    const paginatedUniversities = filteredUniversities?.slice(start, start + uniPerPage)
-    const totalPage = filteredUniversities && Math.ceil(filteredUniversities.length / uniPerPage);
+    const start = (receivedPage - 1) * itemsPerPage;
+    const paginatedItems = filteredItems?.slice(start, start + itemsPerPage)
+    const totalPage = filteredItems && Math.ceil(filteredItems.length / itemsPerPage);
 
     const handlePageChange = (p: number) => {
         const params = new URLSearchParams(searchParams)
@@ -43,11 +47,12 @@ const usePageService = (universities: Array<University> | undefined) => {
         }
     }, 300)
 
+
     return {
         totalPage,
         receivedPage,
         handlePageChange,
-        paginatedUniversities,
+        paginatedItems,
         handleQueryChange,
     }
 }

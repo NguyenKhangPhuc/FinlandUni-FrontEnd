@@ -1,24 +1,17 @@
-// export interface Admission {
-//     entranceExam: string,
-//     sat: string,
-// }
 
-
-// export interface Major {
-//     majorName: string,
-//     degreeType: string,
-//     duration: string,
-//     applicationPeriod: string,
-//     language: string,
-//     field: string,
-//     admission: Admission,
-//     majorOverview: string,
-// }
-
-// interface Majors {
-//     bachelor: Array<Major>,
-//     master: Array<Major>,
-// }
+export interface Major {
+    uni_id: string,
+    major: string,
+    degree: string,
+    duration: string,
+    credits: string,
+    applicationPeriod: string,
+    language: string,
+    studyField: string,
+    tuition: string,
+    description: string,
+    website: string
+}
 
 export interface University {
     id: string,
