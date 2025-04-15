@@ -2,6 +2,7 @@
 import usePageService from "../services/PageService"
 import { Major } from "../types/universities"
 import Paginations from "./Paginations"
+import SearchingPart from "./SearchingPart"
 
 const Majors = ({ majors }: { majors: Array<Major> }) => {
     const { totalPage, receivedPage, handlePageChange, paginatedItems, handleQueryChange } = usePageService(majors)
@@ -9,7 +10,7 @@ const Majors = ({ majors }: { majors: Array<Major> }) => {
     console.log(paginatedItems)
     return (
         <div className="w-full h-auto flex flex-col text-white items-center" >
-
+            <SearchingPart handleQueryChange={handleQueryChange} items={majors} />
             {paginatedItems?.map((major) => {
                 if ('major' in major) {
                     return (
