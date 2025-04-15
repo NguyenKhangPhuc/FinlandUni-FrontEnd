@@ -12,12 +12,16 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
     const router = useRouter()
     const query = searchParams.get('query') || ''
     const receivedPage = parseInt(searchParams.get('page') ?? '1', 10);
+    const degreeOption = searchParams.get('degree') || ''
+    const field = searchParams.get('field') || ''
     const itemsPerPage = 4;
     const filteredItems = items?.filter((uni) => {
         if ('name' in uni) {
             return uni.name.toLowerCase().includes(query.toLowerCase())
         } else {
-            return uni.major.toLowerCase().includes(query.toLowerCase())
+            return uni.major.toLowerCase().includes(query.toLowerCase()) &&
+                uni.degree.toLowerCase().includes(degreeOption.toLowerCase()) &&
+                uni.studyField.toLowerCase().includes(field.toLowerCase())
         }
 
     })
@@ -47,13 +51,24 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         }
     }, 300)
 
-    // const handleRecommendation = (value: string) => {
-    //     const params = new URLSearchParams(searchParams)
-    //     params.set('query', value)
-    //     if (router) {
-    //         router.push(`${pathname}?${params.toString()}`)
-    //     }
-    // }
+    const handleDegreeChange = (value: string) => {
+        const params = new URLSearchParams(searchParams)
+        params.set('degree', value)
+        params.set('page', '1')
+        if (router) {
+            router.push(`${pathname}?${params.toString()}`)
+        }
+    }
+
+    const handleFieldchange = (value: string) => {
+        const params = new URLSearchParams(searchParams)
+        params.set('field', value)
+        params.set('page', '1')
+        if (router) {
+            router.push(`${pathname}?${params.toString()}`)
+        }
+    }
+
 
     return {
         totalPage,
@@ -61,6 +76,8 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         handlePageChange,
         paginatedItems,
         handleQueryChange,
+        handleDegreeChange,
+        handleFieldchange
     }
 }
 
