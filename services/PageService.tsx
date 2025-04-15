@@ -29,12 +29,22 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
     const paginatedItems = filteredItems?.slice(start, start + itemsPerPage)
     const totalPage = filteredItems && Math.ceil(filteredItems.length / itemsPerPage);
 
+
+    const scrollToElement = (value: string) => {
+        const section = document.getElementById(value);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
     const handlePageChange = (p: number) => {
         const params = new URLSearchParams(searchParams)
         params.set('page', p.toString())
         if (router) {
             router.push(`${pathname}?${params.toString()}`)
         }
+
     }
 
     const handleQueryChange = useDebouncedCallback((value: string) => {
@@ -42,13 +52,14 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         const params = new URLSearchParams(searchParams);
         params.set('query', value)
         params.set('page', '1')
+        if (value == '') {
+            params.set('degree', '')
+            params.set('field', '')
+        }
         if (router) {
-            router.push(`${pathname}?${params.toString()}`)
+            router.push(`${pathname}?${params.toString()}`, { scroll: false })
         }
-        const section = document.getElementById('universities');
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
+        scrollToElement('universities')
     }, 300)
 
     const handleDegreeChange = (value: string) => {
@@ -56,8 +67,10 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         params.set('degree', value)
         params.set('page', '1')
         if (router) {
-            router.push(`${pathname}?${params.toString()}`)
+            router.push(`${pathname}?${params.toString()}`, { scroll: false })
         }
+        scrollToElement('major')
+
     }
 
     const handleFieldchange = (value: string) => {
@@ -65,8 +78,9 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         params.set('field', value)
         params.set('page', '1')
         if (router) {
-            router.push(`${pathname}?${params.toString()}`)
+            router.push(`${pathname}?${params.toString()}`, { scroll: false })
         }
+        scrollToElement('major')
     }
 
 
@@ -77,7 +91,7 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         paginatedItems,
         handleQueryChange,
         handleDegreeChange,
-        handleFieldchange
+        handleFieldchange,
     }
 }
 
