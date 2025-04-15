@@ -47,6 +47,13 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         }
     }, 300)
 
+    // const handleRecommendation = (value: string) => {
+    //     const params = new URLSearchParams(searchParams)
+    //     params.set('query', value)
+    //     if (router) {
+    //         router.push(`${pathname}?${params.toString()}`)
+    //     }
+    // }
 
     return {
         totalPage,

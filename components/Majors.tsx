@@ -8,12 +8,14 @@ const Majors = ({ majors }: { majors: Array<Major> }) => {
 
     console.log(paginatedItems)
     return (
-        <div className="w-full h-auto flex flex-col text-white items-center">
+        <div className="w-full h-auto flex flex-col text-white items-center" >
+
             {paginatedItems?.map((major) => {
                 if ('major' in major) {
                     return (
                         <div key={`${major.major} of ${major.uni_id}`}
-                            className="w-full max-w-4xl flex flex-col items-center bg-gray-800 p-2 rounded-lg shadow-lg mx-auto my-4"
+                            className="major_box "
+                            onClick={() => window.location.href = `${major.website}`}
                         >
                             <div className="text-1xl font-bold p-5">{major.major}</div>
 
