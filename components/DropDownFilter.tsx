@@ -1,9 +1,11 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { useSearchParams } from 'next/navigation'
 import { Dispatch, SetStateAction, useState } from "react"
 interface Props {
     options: Array<string>,
-    handleFilter: (value: string) => void
+    handleFilter: (value: string) => void,
+    kind: 'degree' | 'field'
 
 }
 
@@ -47,8 +49,13 @@ const DeleteButton = ({ setCurrentOption, handleFilter }: ButtonProps) => {
 }
 
 
-const DropDownFilter = ({ options, handleFilter }: Props) => {
-    const [currentOption, setCurrentOption] = useState('Options')
+const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
+    const searchParams = useSearchParams()
+    let queryOption = kind === 'degree' ? searchParams.get('degree') : searchParams.get('field')
+    if (!queryOption) {
+        queryOption = 'Options'
+    }
+    const [currentOption, setCurrentOption] = useState(queryOption)
     return (
 
         <>
@@ -88,7 +95,7 @@ const DropDownFilter = ({ options, handleFilter }: Props) => {
                 </MenuItems>
 
             </Menu>
-            <DeleteButton handleFilter={handleFilter} setCurrentOption={setCurrentOption} />
+            {currentOption != 'Options' && <DeleteButton handleFilter={handleFilter} setCurrentOption={setCurrentOption} />}
 
         </>
 

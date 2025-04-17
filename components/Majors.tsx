@@ -14,7 +14,7 @@ const Majors = ({ majors }: { majors: Array<Major> }) => {
         paginatedItems,
         handleQueryChange,
         handleDegreeChange,
-        handleFieldchange,
+        handleFieldChange,
     } = usePageService(majors)
     const degreeOptions = ['Bachelor studies', 'Master studies', 'Doctoral studies']
     const fieldOptions = ['Art and design', 'Technology and Engineering', 'Business and Economics']
@@ -23,8 +23,8 @@ const Majors = ({ majors }: { majors: Array<Major> }) => {
 
             <SearchingPart handleQueryChange={handleQueryChange} items={majors} />
             <div className=" w-full max-w-4xl flex justify-center p-5 gap-5 items-center">
-                <DropDownFilter options={degreeOptions} handleFilter={handleDegreeChange} />
-                <DropDownFilter options={fieldOptions} handleFilter={handleFieldchange} />
+                <DropDownFilter options={degreeOptions} handleFilter={handleDegreeChange} kind='degree' />
+                <DropDownFilter options={fieldOptions} handleFilter={handleFieldChange} kind='field' />
             </div>
             {paginatedItems?.map((major) => {
                 if ('major' in major) {

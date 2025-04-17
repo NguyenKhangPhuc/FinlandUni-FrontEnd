@@ -44,7 +44,7 @@ const SearchingPart = ({ handleQueryChange, items }: Props) => {
         >
             <div className="w-1/2 flex flex-col justify-center">
                 <input
-                    placeholder="Tìm kiếm các trường đại học..."
+                    placeholder="Searching for universities..."
                     className="input-pop-up input w-full h-[2rem]"
                     name="university_search"
                     onChange={(e) => handleShowRecommendation(e)}

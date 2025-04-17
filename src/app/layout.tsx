@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 // import ReduxProvider from "../../provider/ReduxProvider";
 // import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import QueryProvider from "../../provider/QueryProvide";
+import Footer from "../../components/Footer";
 
 
 const roboto = Roboto({ subsets: ['latin'] })
@@ -24,10 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} min-h-screen bg-black`}
+        className={`${roboto.className} flex flex-col min-h-screen bg-black`}
       >
         <Header />
-        <QueryProvider><main >{children}</main></QueryProvider>
+        <QueryProvider><main className="flex-grow">{children}</main></QueryProvider>
+        <Footer />
       </body>
     </html>
   );
