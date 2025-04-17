@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import fb from '../assets/fb_logo.png'
-import linkedIn from '../assets/linkedIn.png'
+import fb from '../src/app/assets/fb_logo.png'
+import linkedIn from '../src/app/assets/linkedIn.png'
 import Link from 'next/link'
 const Footer = () => {
     return (
