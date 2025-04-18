@@ -6,7 +6,7 @@ import SearchingPart from "./SearchingPart"
 import DropDownFilter from "./DropDownFilter"
 
 
-const Majors = ({ majors }: { majors: Array<Major> }) => {
+const Majors = ({ majors, fieldOptions }: { majors: Array<Major>, id: string, fieldOptions: Array<string> }) => {
     const {
         totalPage,
         receivedPage,
@@ -17,7 +17,6 @@ const Majors = ({ majors }: { majors: Array<Major> }) => {
         handleFieldChange,
     } = usePageService(majors)
     const degreeOptions = ['Bachelor studies', 'Master studies', 'Doctoral studies']
-    const fieldOptions = ['Art and design', 'Technology and Engineering', 'Business and Economics']
     return (
         <div className="w-full h-auto flex flex-col text-white items-center" >
 

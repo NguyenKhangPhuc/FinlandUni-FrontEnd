@@ -23,4 +23,5 @@ export interface University {
     scholarship: string,
     type: string,
     website: string,
+    fieldOptions: Array<string>
 }
