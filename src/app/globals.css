@@ -312,7 +312,7 @@ html {
 }
 
 .link {
-  @apply w-full hover:bg-indigo-600 text-center p-2 duration-200;
+  @apply w-full hover:bg-indigo-600 text-center p-2 duration-200 font-light;
 }
 
 .header {

@@ -16,11 +16,13 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
     const degreeOption = searchParams.get('degree') || ''
     const field = searchParams.get('field') || ''
     const uniType = searchParams.get('uniType') || ''
+    const uniFieldType = searchParams.get('uniFieldType') || ''
     const itemsPerPage = 4;
     const filteredItems = items?.filter((uni) => {
         if ('name' in uni) {
             return uni.name.toLowerCase().includes(query.toLowerCase()) &&
-                uni.type.toLowerCase().includes(uniType.toLowerCase())
+                uni.type.toLowerCase().includes(uniType.toLowerCase()) &&
+                uni.fieldOptions.some(f => f.toLowerCase().includes(uniFieldType.toLowerCase()))
         } else {
             return uni.major.toLowerCase().includes(query.toLowerCase()) &&
                 uni.degree.toLowerCase().includes(degreeOption.toLowerCase()) &&
@@ -96,6 +98,16 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         scrollToElement('universities')
     }
 
+    const handleUniFieldType = (value: string) => {
+        const params = new URLSearchParams(searchParams)
+        params.set('uniFieldType', value)
+        params.set('page', '1')
+        if (router) {
+            router.push(`${pathname}?${params.toString()}`, { scroll: false })
+        }
+        scrollToElement('universities')
+    }
+
     return {
         totalPage,
         receivedPage,
@@ -105,6 +117,7 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         handleDegreeChange,
         handleFieldChange,
         handleUniTypeChange,
+        handleUniFieldType,
     }
 }
 

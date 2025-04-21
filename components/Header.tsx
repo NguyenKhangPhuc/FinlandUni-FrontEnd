@@ -19,24 +19,24 @@ const Header = () => {
         <div className="w-full flex flex-col items-center bg-black text-white">
             <div className="w-full bg-gray-900 flex relative items-center justify-center p-5 ">
                 <HamburgetIcon setHamburgerValue={setHamburgerValue} hamburgerValue={hamburgerValue} />
-                <div className="font-bold text-4xl text-indigo-500">FinlandUni</div>
+                <Link href={'/'}><div className="font-bold text-4xl text-indigo-500">FinlandUni</div> </Link>
             </div>
             {hamburgerValue &&
                 <div className="w-full bg-gray-900 flex border-t border-gray-800 p-5">
                     <div className="div_link border-r border-gray-800">
-                        <div className="font-bold text-xl text-indigo-300 pb-3">About Finland</div>
+                        <div className="font-medium text-xl text-indigo-300 pb-3">About Finland</div>
                         <Link href={`/finland-overview`} className="link">Overview</Link>
                         <Link href={`/finland-overview`} className="link">Living cost and external fees</Link>
                         <Link href={`/finland-overview`} className="link">Accomodation</Link>
                     </div>
                     <div className="div_link border-r border-gray-800">
-                        <div className="font-bold text-xl text-indigo-300 pb-3">Admission</div>
+                        <div className="font-medium text-xl text-indigo-300 pb-3">Admission</div>
                         <Link href={`/finland-overview`} className="link">About degrees</Link>
                         <Link href={`/finland-overview`} className="link">About universities</Link>
                         <Link href={`/finland-overview`} className="link">Universities List</Link>
                     </div>
                     <div className="div_link">
-                        <div className="font-bold text-xl text-indigo-300 pb-3" >About FinlandUni</div>
+                        <div className="font-medium text-xl text-indigo-300 pb-3" >About FinlandUni</div>
                         <Link href={`/finland-overview`} className="link">Disclaimer and Privacy Policy</Link>
                         <Link href={`/finland-overview`} className="link">Term of Services</Link>
                         <Link href={`/finland-overview`} className="link">Cookies settings</Link>

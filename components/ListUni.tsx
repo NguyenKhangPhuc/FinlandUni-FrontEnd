@@ -14,6 +14,12 @@ const ListUni = ({ universities }: { universities: Array<University> }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [uniIndex, setUniIndex] = useState<number | undefined>(undefined)
     const uniTypes = ['Research University', 'UAS']
+    const uniField = ['Engineering', 'Ethical Technological Future', 'Business', 'Natural Sciences', 'Health and Biomedical Sciences',
+        'Education', 'Hospitality Management', 'Health', 'Social', 'Society', 'Built Environment',
+        'Information Technology', 'Life Sciences', 'Architecture', 'Mining', 'Human Sciences', 'Culture',
+        'Arts', 'Sports Management', 'Sustainability Transformation', 'Environmental, Food and Biological Sciences', 'Forest Sciences',
+        'Law', 'Laboratory Services'
+    ]
     const {
         totalPage,
         receivedPage,
@@ -21,6 +27,7 @@ const ListUni = ({ universities }: { universities: Array<University> }) => {
         paginatedItems: paginatedUniversities,
         handleQueryChange,
         handleUniTypeChange,
+        handleUniFieldType,
     } = usePageService(universities)
 
     const handleExtend = (i: number) => {
@@ -33,7 +40,8 @@ const ListUni = ({ universities }: { universities: Array<University> }) => {
         <>
             <SearchingPart handleQueryChange={handleQueryChange} items={universities} />
             <div className="w-full max-w-4xl flex justify-center p-5 gap-5 items-center">
-                <DropDownFilter options={uniTypes} handleFilter={handleUniTypeChange} kind="degree" />
+                <DropDownFilter options={uniField} handleFilter={handleUniFieldType} kind="uniFieldType" />
+                <DropDownFilter options={uniTypes} handleFilter={handleUniTypeChange} kind="uniType" />
             </div>
             {paginatedUniversities?.map((university, index) => {
                 return (

@@ -12,7 +12,7 @@ export default async function UniversityDetails({ params }: { params: { id: stri
     return (
         <div className="w-full flex flex-col items-center">
             <div className="header p-3">{university.name} #{university.ranking}</div>
-            <div className="w-full bg-gray-800 text-white p-3 opacity-70 flex justify-center gap-12 text-[12px]">
+            <div className="w-full bg-gray-800 text-white p-3 opacity-70 flex justify-around text-[12px]">
                 <div>Location: {university.city}</div>
                 <div>Type: {university.type}</div>
                 <div>Tuition: {university.tuition}</div>

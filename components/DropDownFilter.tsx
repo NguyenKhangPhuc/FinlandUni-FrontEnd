@@ -5,7 +5,7 @@ import { Dispatch, SetStateAction, useState } from "react"
 interface Props {
     options: Array<string>,
     handleFilter: (value: string) => void,
-    kind: 'degree' | 'field'
+    kind: 'degree' | 'field' | 'uniType' | 'uniFieldType'
 
 }
 
@@ -51,10 +51,38 @@ const DeleteButton = ({ setCurrentOption, handleFilter }: ButtonProps) => {
 
 const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
     const searchParams = useSearchParams()
-    let queryOption = kind === 'degree' ? searchParams.get('degree') : searchParams.get('field')
-    if (!queryOption) {
-        queryOption = 'Options'
+    let queryOption;
+
+    switch (kind) {
+        case 'degree':
+            queryOption = searchParams.get('degree');
+            if (!queryOption) {
+                queryOption = 'Degree'
+            }
+            break;
+        case 'field':
+            queryOption = searchParams.get('field');
+            if (!queryOption) {
+                queryOption = 'Field of studies'
+            }
+            break;
+        case 'uniFieldType':
+            queryOption = searchParams.get('uniFieldType');
+            if (!queryOption) {
+                queryOption = 'Field of studies'
+            }
+            break;
+        case 'uniType':
+            queryOption = searchParams.get('uniType');
+            if (!queryOption) {
+                queryOption = 'Type of university'
+            }
+            break;
+        default:
+            break;
     }
+
+
     const [currentOption, setCurrentOption] = useState(queryOption)
     return (
 
@@ -69,7 +97,7 @@ const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
 
                 <MenuItems
                     transition
-                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+                    className={`${options.length > 6 && 'max-h-[400px] overflow-y-scroll'}  absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`}
                 >
                     <div className="py-1">
                         {options.map(d => {
