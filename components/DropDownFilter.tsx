@@ -5,19 +5,20 @@ import { Dispatch, SetStateAction, useState } from "react"
 interface Props {
     options: Array<string>,
     handleFilter: (value: string) => void,
-    kind: 'degree' | 'field' | 'uniType' | 'uniFieldType'
+    kind: 'Degree' | 'Field' | 'University' | 'Field of studies'
 
 }
 
 interface ButtonProps {
     setCurrentOption: Dispatch<SetStateAction<string>>
     handleFilter: (value: string) => void
+    kind: 'Degree' | 'Field' | 'University' | 'Field of studies'
 }
 
-const DeleteButton = ({ setCurrentOption, handleFilter }: ButtonProps) => {
+const DeleteButton = ({ setCurrentOption, handleFilter, kind }: ButtonProps) => {
     return (
         <button className="deleteButton" onClick={() => {
-            setCurrentOption('Options')
+            setCurrentOption(kind)
             handleFilter('')
         }}>
             <svg
@@ -51,39 +52,7 @@ const DeleteButton = ({ setCurrentOption, handleFilter }: ButtonProps) => {
 
 const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
     const searchParams = useSearchParams()
-    let queryOption;
-
-    switch (kind) {
-        case 'degree':
-            queryOption = searchParams.get('degree');
-            if (!queryOption) {
-                queryOption = 'Degree'
-            }
-            break;
-        case 'field':
-            queryOption = searchParams.get('field');
-            if (!queryOption) {
-                queryOption = 'Field of studies'
-            }
-            break;
-        case 'uniFieldType':
-            queryOption = searchParams.get('uniFieldType');
-            if (!queryOption) {
-                queryOption = 'Field of studies'
-            }
-            break;
-        case 'uniType':
-            queryOption = searchParams.get('uniType');
-            if (!queryOption) {
-                queryOption = 'Type of university'
-            }
-            break;
-        default:
-            if (!queryOption) {
-                queryOption = 'Option'
-            }
-            break;
-    }
+    const queryOption = searchParams.get(kind) || kind;
 
 
     const [currentOption, setCurrentOption] = useState(queryOption)
@@ -126,7 +95,7 @@ const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
                 </MenuItems>
 
             </Menu>
-            {currentOption != 'Options' && <DeleteButton handleFilter={handleFilter} setCurrentOption={setCurrentOption} />}
+            {currentOption != kind && <DeleteButton handleFilter={handleFilter} setCurrentOption={setCurrentOption} kind={kind} />}
 
         </>
 

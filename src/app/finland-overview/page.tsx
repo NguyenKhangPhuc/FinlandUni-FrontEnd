@@ -1,7 +1,8 @@
 export default function Home() {
     return (
         <div className="w-full flex flex-col items-center text-white mt-10">
-            <div className="header w-full text-center pb-5">Overview about Finland</div>
+            <div className="header w-full text-center">Overview about Finland</div>
+            <div className="w-2/3 text-center opacity-70 pb-5">Finland: A Smart Choice for a Bright Future.</div>
             <section className="w-2/3 text-white bg-gray-800 p-10 rounded-lg">
 
 

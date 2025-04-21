@@ -22,8 +22,8 @@ const Majors = ({ majors, fieldOptions }: { majors: Array<Major>, id: string, fi
 
             <SearchingPart handleQueryChange={handleQueryChange} items={majors} />
             <div className=" w-full max-w-4xl flex justify-center p-5 gap-5 items-center">
-                <DropDownFilter options={degreeOptions} handleFilter={handleDegreeChange} kind='degree' />
-                <DropDownFilter options={fieldOptions} handleFilter={handleFieldChange} kind='field' />
+                <DropDownFilter options={degreeOptions} handleFilter={handleDegreeChange} kind='Degree' />
+                <DropDownFilter options={fieldOptions} handleFilter={handleFieldChange} kind='Field of studies' />
             </div>
             {paginatedItems?.map((major) => {
                 if ('major' in major) {

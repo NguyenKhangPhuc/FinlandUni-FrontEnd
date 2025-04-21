@@ -13,10 +13,10 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
 
     const query = searchParams.get('query') || ''
     const receivedPage = parseInt(searchParams.get('page') ?? '1', 10);
-    const degreeOption = searchParams.get('degree') || ''
-    const field = searchParams.get('field') || ''
-    const uniType = searchParams.get('uniType') || ''
-    const uniFieldType = searchParams.get('uniFieldType') || ''
+    const degreeOption = searchParams.get('Degree') || ''
+    const field = searchParams.get('Field of studies') || ''
+    const uniType = searchParams.get('University') || ''
+    const uniFieldType = searchParams.get('Field') || ''
     const itemsPerPage = 4;
     const filteredItems = items?.filter((uni) => {
         if ('name' in uni) {
@@ -58,8 +58,8 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
         params.set('query', value)
         params.set('page', '1')
         if (value == '') {
-            params.set('degree', '')
-            params.set('field', '')
+            params.set('Degree', '')
+            params.set('Field of studies', '')
         }
         if (router) {
             router.push(`${pathname}?${params.toString()}`, { scroll: false })
@@ -69,7 +69,7 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
 
     const handleDegreeChange = (value: string) => {
         const params = new URLSearchParams(searchParams)
-        params.set('degree', value)
+        params.set('Degree', value)
         params.set('page', '1')
         if (router) {
             router.push(`${pathname}?${params.toString()}`, { scroll: false })
@@ -80,7 +80,7 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
 
     const handleFieldChange = (value: string) => {
         const params = new URLSearchParams(searchParams)
-        params.set('field', value)
+        params.set('Field of studies', value)
         params.set('page', '1')
         if (router) {
             router.push(`${pathname}?${params.toString()}`, { scroll: false })
@@ -90,7 +90,7 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
 
     const handleUniTypeChange = (value: string) => {
         const params = new URLSearchParams(searchParams)
-        params.set('uniType', value)
+        params.set('University', value)
         params.set('page', '1')
         if (router) {
             router.push(`${pathname}?${params.toString()}`, { scroll: false })
@@ -100,7 +100,7 @@ const usePageService = (items: Array<University> | Array<Major> | undefined) => 
 
     const handleUniFieldType = (value: string) => {
         const params = new URLSearchParams(searchParams)
-        params.set('uniFieldType', value)
+        params.set('Field', value)
         params.set('page', '1')
         if (router) {
             router.push(`${pathname}?${params.toString()}`, { scroll: false })

@@ -40,8 +40,8 @@ const ListUni = ({ universities }: { universities: Array<University> }) => {
         <>
             <SearchingPart handleQueryChange={handleQueryChange} items={universities} />
             <div className="w-full max-w-4xl flex justify-center p-5 gap-5 items-center">
-                <DropDownFilter options={uniField} handleFilter={handleUniFieldType} kind="uniFieldType" />
-                <DropDownFilter options={uniTypes} handleFilter={handleUniTypeChange} kind="uniType" />
+                <DropDownFilter options={uniField} handleFilter={handleUniFieldType} kind="Field" />
+                <DropDownFilter options={uniTypes} handleFilter={handleUniTypeChange} kind="University" />
             </div>
             {paginatedUniversities?.map((university, index) => {
                 return (

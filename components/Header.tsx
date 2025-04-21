@@ -25,11 +25,11 @@ const Header = () => {
                 },
                 {
                     link_title: 'Living cost and external fees',
-                    link: '/finland-overview'
+                    link: '/living-cost-and-external-fees'
                 },
                 {
                     link_title: 'Accomodation',
-                    link: '/finland-overview'
+                    link: '/accomodation'
                 }
             ]
         },
@@ -38,11 +38,11 @@ const Header = () => {
             links: [
                 {
                     link_title: 'About Degrees',
-                    link: '/finland-overview'
+                    link: '/degree'
                 },
                 {
                     link_title: 'Universities List',
-                    link: '/finland-overview'
+                    link: '/'
                 }
             ]
         },
@@ -51,7 +51,7 @@ const Header = () => {
             links: [
                 {
                     link_title: 'Disclaimer and Privacy Policy',
-                    link: '/finland-overview'
+                    link: '/disclaimer-and-privacy-policy'
                 },
                 {
                     link_title: 'Term of Services',
