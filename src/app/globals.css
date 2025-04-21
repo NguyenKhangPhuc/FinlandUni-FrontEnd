@@ -350,11 +350,11 @@ html {
 
 
 h1 {
-  @apply text-4xl font-bold;
+  @apply text-3xl font-bold;
 }
 
 h2 {
-  @apply text-3xl font-semibold p-5;
+  @apply text-2xl font-semibold p-5;
 }
 
 h3 {

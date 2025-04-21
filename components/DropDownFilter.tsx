@@ -79,6 +79,9 @@ const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
             }
             break;
         default:
+            if (!queryOption) {
+                queryOption = 'Option'
+            }
             break;
     }
 
