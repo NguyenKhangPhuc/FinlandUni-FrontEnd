@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <div className="w-full flex flex-col items-center text-white">
+        <div className="w-full flex flex-col items-center text-white mt-10">
             <h1 className="w-full text-center pb-5">About Finland</h1>
             <section className="w-2/3 text-white bg-gray-800 p-10 rounded-lg">
 

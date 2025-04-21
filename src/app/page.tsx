@@ -7,15 +7,16 @@ export default async function Home() {
   const universities = await getUniversities()
 
   return (
-    <div className="w-full flex flex-col items-center text-white">
+    <div className="w-full flex flex-col items-center text-white mt-10">
       <div
         className="header header-pop-up"
       >
-        Finland Universities
+        Universities in Finland
       </div>
       <div
-        className="p-5 header-pop-up"
-      >Find information about universities at Finland easily
+        className="p-5 header-pop-up text-sm w-1/2 text-center opacity-70"
+      >Finland has 13 universities and 22 universities of applied sciences.
+        English-taught degree programmes are offered on bachelor&apos;s, master&apos;s and doctoral levels.
       </div>
       <ListUni universities={universities} />
     </div>

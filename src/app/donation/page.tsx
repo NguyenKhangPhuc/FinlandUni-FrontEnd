@@ -2,7 +2,7 @@ import Image from "next/image"
 import qr_code from '../assets/QR_CODE.png'
 export default function Home() {
     return (
-        <div className="w-full flex flex-col items-center text-white">
+        <div className="w-full flex flex-col items-center text-white mt-10">
             <h1 className="w-full text-center pb-5">Donation</h1>
             <section className="w-2/3 text-white bg-gray-800 p-5 rounded-lg flex flex-col items-center text-center">
                 <Image
