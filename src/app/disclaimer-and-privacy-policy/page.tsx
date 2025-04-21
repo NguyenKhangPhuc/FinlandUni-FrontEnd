@@ -32,7 +32,7 @@ export default function Home() {
 
                 <h2 className="text-indigo-500">Contact Us</h2>
                 <ul>
-                    <li>If you have any questions about our privacy policy, please feel free to contact us at [nguyenkhangphuc012024@gmail.com].</li>
+                    <li>If you have any questions about our privacy policy, please feel free to contact us at nguyenkhangphuc012024@gmail.com.</li>
                 </ul>
 
                 <h2 className="text-indigo-500">Changes to This Privacy Policy</h2>

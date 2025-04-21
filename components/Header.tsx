@@ -55,7 +55,7 @@ const Header = () => {
                 },
                 {
                     link_title: 'Term of Services',
-                    link: '/finland-overview'
+                    link: '/terms-of-service'
                 },
                 {
                     link_title: 'Cookies settings',
