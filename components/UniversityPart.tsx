@@ -12,6 +12,9 @@ interface Props {
 }
 
 const UniversityPart = ({ university, handleExtend, isOpen, index, uniIndex }: Props) => {
+    ///This function contain the details of each university
+    ///For example: name, tuition fee, location, overview,....
+
     if (university) {
         return (
             <motion.div

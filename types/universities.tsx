@@ -1,4 +1,4 @@
-
+///Contain the Major and University Type.
 export interface Major {
     uni_id: string,
     major: string,

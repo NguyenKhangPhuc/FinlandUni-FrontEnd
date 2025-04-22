@@ -3,6 +3,7 @@ import fb from '../src/app/assets/fb_logo.png'
 import linkedIn from '../src/app/assets/linkedIn.png'
 import Link from 'next/link'
 const Footer = () => {
+    ///This component contain the footer of the website
     return (
         <div className="w-full flex flex-col items-center text-white mt-15 ">
 

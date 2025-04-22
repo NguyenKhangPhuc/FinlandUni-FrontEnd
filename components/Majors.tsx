@@ -7,6 +7,8 @@ import DropDownFilter from "./DropDownFilter"
 
 
 const Majors = ({ majors, fieldOptions }: { majors: Array<Major>, id: string, fieldOptions: Array<string> }) => {
+    ///This component will contain all the majors passed by parents
+    ///besides, it also contains filter for degree and field of studies.
     const {
         totalPage,
         receivedPage,

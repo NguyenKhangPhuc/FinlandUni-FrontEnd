@@ -4,6 +4,9 @@ import { getUniversities } from "../../services/UniService";
 
 
 export default async function Home() {
+  ///Fetch all the universities
+  ///Show the header for the universities list page
+  ///Show the list of universities by a component 'ListUni'
   const universities = await getUniversities()
 
   return (

@@ -51,6 +51,9 @@ const DeleteButton = ({ setCurrentOption, handleFilter, kind }: ButtonProps) => 
 
 
 const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
+    ///From the list of params, get the specific params based on the value of kind
+    ///If the value of params is null => set the default value of dropdown to the value of kind
+    ///Fetch all the options for the dropdown by the options passed by the parent.
     const searchParams = useSearchParams()
     const queryOption = searchParams.get(kind) || kind;
 

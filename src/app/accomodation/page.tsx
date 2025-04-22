@@ -1,4 +1,5 @@
 export default function Home() {
+    ///Contain design and content of accomodation page.
     return (
         <div className="w-full flex flex-col items-center text-white mt-10">
             <div className="header w-full text-center">Living cost and external fees in Finland</div>

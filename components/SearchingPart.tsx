@@ -10,10 +10,20 @@ interface Props {
 }
 
 const SearchingPart = ({ handleQueryChange, items }: Props) => {
+
+    ///This component will catch the value of the input
+    ///Show the recommendattion based on the items passed
+    ///This component will be reused for both universities search and majors search
+    ///When a recommendation is clicked, it will set the 'query' params on the url
+    ///Then show only that recommendation details
+
     const [searchValue, setSearchValue] = useState('')
     const [searchRecommendations, setSearchRecommendation] = useState<Array<University | Major>>([])
 
     const handleShowRecommendation = useDebouncedCallback((e: ChangeEvent<HTMLInputElement>) => {
+        ///Catch the value of the input
+        ///Filter the items base on the value of input, and base on type of items.
+        ///UseDebouncedCallback to only call the function after the input value stopped for 3 seconds.
         setSearchValue(e.target.value)
         if (e.target.value == '') {
             setSearchRecommendation([])
@@ -31,6 +41,8 @@ const SearchingPart = ({ handleQueryChange, items }: Props) => {
     }, 300)
 
     const handleChooseRecommendation = (value: string) => {
+        ///Set the 'query' params on the url to the clicked recommmendation value
+        ///Close the recommendation part.
         handleQueryChange(value)
         setSearchRecommendation([])
     }

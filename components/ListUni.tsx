@@ -11,6 +11,7 @@ import DropDownFilter from "./DropDownFilter";
 
 
 const ListUni = ({ universities }: { universities: Array<University> }) => {
+    ///This component will show all the universities
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [uniIndex, setUniIndex] = useState<number | undefined>(undefined)
     const uniTypes = ['Research University', 'UAS']
@@ -20,6 +21,7 @@ const ListUni = ({ universities }: { universities: Array<University> }) => {
         'Arts', 'Sports Management', 'Sustainability Transformation', 'Environmental, Food and Biological Sciences', 'Forest Sciences',
         'Law', 'Laboratory Services'
     ]
+
     const {
         totalPage,
         receivedPage,
@@ -31,6 +33,8 @@ const ListUni = ({ universities }: { universities: Array<University> }) => {
     } = usePageService(universities)
 
     const handleExtend = (i: number) => {
+        /// Show more information of a university when someone click it
+        /// Set the uniIndex to the clicked university's index to show only its information
         setUniIndex(i)
         setIsOpen(true)
     }

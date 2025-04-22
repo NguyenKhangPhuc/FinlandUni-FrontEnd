@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 const DetailButton = ({ isOpen, uniIndex, index, uniID }: { isOpen: boolean, uniIndex: number | undefined, index: number, uniID: string }) => {
+    ///Show the button when a specific university is clicked
+    ///Navigate to the university details (/university/aalto for example)
+    ///If the button is clicked
+
     return (
         <Link href={`/university/${uniID}`}>
             <div className={`relative group ${isOpen && uniIndex == index ? 'block' : 'hidden'}`}>

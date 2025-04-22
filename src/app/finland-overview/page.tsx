@@ -1,4 +1,5 @@
 export default function Home() {
+    ///Contain the design and content of the finland overview page.
     return (
         <div className="w-full flex flex-col items-center text-white mt-10">
             <div className="header w-full text-center">Overview about Finland</div>

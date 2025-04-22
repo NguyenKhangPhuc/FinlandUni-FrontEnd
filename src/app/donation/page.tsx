@@ -1,6 +1,7 @@
 import Image from "next/image"
 import qr_code from '../assets/QR_CODE.png'
 export default function Home() {
+    ///Contains the design and content of donation page.
     return (
         <div className="w-full flex flex-col items-center text-white mt-10">
             <h1 className="w-full text-center pb-5">Donation</h1>

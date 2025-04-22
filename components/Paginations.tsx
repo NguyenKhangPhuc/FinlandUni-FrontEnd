@@ -5,6 +5,11 @@ interface Props {
 }
 
 const Paginations = ({ totalPage, receivedPage, handlePageChange }: Props) => {
+
+    ///This component contain the pagination part for the website
+    ///It will create an array of numbers based on the number of page (totalPage value)
+    ///to map over it, and show only the first, current, nearCurrent, and last page.
+    ///the page that 2 step far away from the current page will be shown as dots.
     return (
         <div className=" flex p-3 gap-2 ">
             {totalPage && Array.from({ length: totalPage }, (_, i) => i + 1).map(page => {

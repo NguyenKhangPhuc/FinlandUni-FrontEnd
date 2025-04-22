@@ -4,6 +4,9 @@ import Majors from "../../../../components/Majors"
 import { getMajorsByUni, getUniversityById } from "../../../../services/UniService"
 
 export default async function UniversityDetails({ params }: { params: { id: string } }) {
+
+    ///Getting the id from the url, use that id to fetch the specific university and its major
+    ///This component contains the detail for the university and show its major by a component 'Majors'
     const { id } = await params
     const university = await getUniversityById(id)
     const majors = await getMajorsByUni(id)
