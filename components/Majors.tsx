@@ -21,7 +21,6 @@ const Majors = ({ majors, fieldOptions }: { majors: Array<Major>, id: string, fi
     const degreeOptions = ['Bachelor studies', 'Master studies', 'Doctoral studies']
     return (
         <div className="w-full h-auto flex flex-col text-white items-center" >
-
             <SearchingPart handleQueryChange={handleQueryChange} items={majors} />
             <div className=" w-full max-w-4xl flex justify-center p-5 gap-5 items-center">
                 <DropDownFilter options={degreeOptions} handleFilter={handleDegreeChange} kind='Degree' />
@@ -66,7 +65,7 @@ const Majors = ({ majors, fieldOptions }: { majors: Array<Major>, id: string, fi
                             </div>
 
                             <div className="font-bold text-lg">Description</div>
-                            <div className="w-2/3 text-[14px] text-center opacity-90">{major.description}</div>
+                            <div className="lg:w-2/3 w-full lg:text-[16px] text-[14px] text-center opacity-90">{major.description}</div>
 
                         </div>
 

@@ -18,9 +18,9 @@ const DetailButton = ({ isOpen, uniIndex, index, uniID }: { isOpen: boolean, uni
                         className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     ></span>
 
-                    <span className="relative z-10 block px-4 py-1 rounded-xl bg-gray-950">
+                    <span className="2xl:px-10 2xl:py-3 lg:px-6 lg:py-2 relative z-10 block px-4 py-1 rounded-xl bg-gray-950">
                         <div className="relative z-10 flex items-center space-x-2">
-                            <span className="transition-all duration-500 group-hover:translate-x-1 text-xs"
+                            <span className="2xl:text-xl lg:text-lg transition-all duration-500 group-hover:translate-x-1 text-xs"
                             >More details</span>
                             <svg
                                 className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"

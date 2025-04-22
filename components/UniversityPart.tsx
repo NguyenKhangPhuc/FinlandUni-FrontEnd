@@ -22,25 +22,25 @@ const UniversityPart = ({ university, handleExtend, isOpen, index, uniIndex }: P
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}
                 transition={{ duration: 0.2, delay: (index) * 0.1 }}
-                className="w-1/2 p-6 border-b border-white hover:text-indigo-200 duration-300 cursor-pointer hover:border-indigo-500 "
+                className="lg:w-2/3 w-full p-6 border-b border-white hover:text-indigo-200 duration-300 cursor-pointer hover:border-indigo-500 "
                 onClick={() => handleExtend(index)}
             >
-                <div className="text-1xl font-bold">{university.name} #{university.ranking}</div>
-                <div className="flex justify-between opacity-70 text-[13px] font-bold">
+                <div className="2xl:text-2xl text-1xl font-bold">{university.name} </div>
+                <div className="2xl:text-[20px] lg:text-[17px] flex justify-between opacity-70 text-[13px] font-bold">
                     <div>Location: {university.city}</div>
                     <div>Type: {university.type}</div>
                 </div>
-                <div className="opacity-70 text-[11px]">Tuition: {university.tuition}</div>
-                <div className="opacity-70 text-[11px]">Scholarship: {university.scholarship}</div>
+                <div className="2xl:text-[18px] lg:text-[15px] opacity-70 text-[11px]">Tuition: {university.tuition}</div>
+                <div className="2xl:text-[18px] lg:text-[15px] opacity-70 text-[11px]">Scholarship: {university.scholarship}</div>
                 <motion.div
                     initial={{ opacity: 0, y: -50, x: -50 }}
                     animate={{ opacity: isOpen && uniIndex == index ? 1 : 0, y: isOpen && uniIndex == index ? 0 : -50, x: isOpen && uniIndex == index ? 0 : -50 }}
                     transition={{ duration: 0.5 }}
-                    className={isOpen && uniIndex == index ? 'block pt-3 pb-3' : 'hidden'}
+                    className={isOpen && uniIndex == index ? '2xl:text-[18px] lg:text-[15px] block pt-3 pb-3' : '2xl:text-[18px] lg:text-[15px] hidden'}
                 >
                     {university.overview}
                 </motion.div>
-                <a className="website_link opacity-70 text-[13px] underline" href={`${university.website}`}>University website: {university.website}</a>
+                <a className="2xl:text-[18px] lg:text-[15px] website_link opacity-70 text-[13px] underline" href={`${university.website}`}>University website: {university.website}</a>
                 <DetailButton isOpen={isOpen} uniIndex={uniIndex} index={index} uniID={university.id} />
             </motion.div>
         )

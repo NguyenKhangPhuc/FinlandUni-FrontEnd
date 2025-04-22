@@ -3,7 +3,7 @@ export default function Home() {
     return (
         <div className="w-full flex flex-col items-center text-white mt-10">
             <div className="header w-full text-center pb-5">Disclaimer and Privacy Policy</div>
-            <section className="w-2/3 text-white bg-gray-800 p-10 rounded-lg">
+            <section className="lg:w-2/3 lg:p-10 w-full text-white bg-gray-800 p-5 rounded-lg">
 
                 <h2 className="text-indigo-500">Disclaimer</h2>
                 <ul>

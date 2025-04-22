@@ -4,7 +4,7 @@ export default function Home() {
         <div className="w-full flex flex-col items-center text-white mt-10">
             <div className="header w-full text-center">Living cost and external fees in Finland</div>
             <div className="w-2/3 text-center opacity-70 pb-5">High-quality education is an investment in your future. Be ready to budget for tuition fees and daily living expenses. After all, great opportunities often come with a cost — and in this case, it’s truly worth it!</div>
-            <section className="w-2/3 text-white bg-gray-800 p-10 rounded-lg">
+            <section className="lg:w-2/3 lg:p-10 w-full text-white bg-gray-800 p-5 rounded-lg">
 
                 <h2 className="text-indigo-500">Tuition fees</h2>
                 <ul>

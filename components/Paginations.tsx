@@ -11,7 +11,7 @@ const Paginations = ({ totalPage, receivedPage, handlePageChange }: Props) => {
     ///to map over it, and show only the first, current, nearCurrent, and last page.
     ///the page that 2 step far away from the current page will be shown as dots.
     return (
-        <div className=" flex p-3 gap-2 ">
+        <div className=" flex p-3 gap-2 mt-5">
             {totalPage && Array.from({ length: totalPage }, (_, i) => i + 1).map(page => {
                 const isFirst = page == 1
                 const isCurrent = page == receivedPage

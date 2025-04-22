@@ -64,7 +64,7 @@ const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
         <>
             <Menu as="div" className="flex relative inline-block text-left">
                 <div>
-                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50">
+                    <MenuButton className="xl:text-lg xl:px-6  inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50">
                         {currentOption}
                         <ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 text-gray-400" />
                     </MenuButton>
@@ -81,7 +81,7 @@ const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
                                     key={`degree options ${d}`}
                                 >
                                     <a
-                                        className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
+                                        className="xl:text-lg block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
                                         onClick={() => {
                                             setCurrentOption(d)
                                             handleFilter(d)

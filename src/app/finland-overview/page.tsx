@@ -3,8 +3,8 @@ export default function Home() {
     return (
         <div className="w-full flex flex-col items-center text-white mt-10">
             <div className="header w-full text-center">Overview about Finland</div>
-            <div className="w-2/3 text-center opacity-70 pb-5">Finland: A Smart Choice for a Bright Future.</div>
-            <section className="w-2/3 text-white bg-gray-800 p-10 rounded-lg">
+            <div className=" w-2/3 text-center opacity-70 pb-5">Finland: A Smart Choice for a Bright Future.</div>
+            <section className="lg:w-2/3 lg:p-10 w-full text-white bg-gray-800 p-5 rounded-lg">
 
 
                 <p>Finland is a beautiful country located in Northern Europe, known for its vast forests, thousands of lakes, and breathtaking landscapes. With long, snowy winters and short, vibrant summers, Finland is a place of both serenity and natural beauty. It&apos;s a country with a high standard of living, exceptional safety, and a peaceful society, making it an ideal destination for international students.</p>

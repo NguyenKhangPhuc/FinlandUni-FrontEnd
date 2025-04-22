@@ -3,8 +3,8 @@ export default function Home() {
     return (
         <div className="w-full flex flex-col items-center text-white mt-10">
             <div className="header w-full text-center">About Degrees</div>
-            <div className="w-2/3 text-center opacity-70 pb-5">Explore nearly 600 bachelor’s and master’s programs offered in English in Finland. Whether you&apos;re looking to boost your career or delve into research and doctoral studies, Finland provides a wide range of opportunities to help you expand your knowledge and pursue your academic goals.</div>
-            <section className="w-2/3 text-white bg-gray-800 p-10 rounded-lg">
+            <div className="lg:w-2/3 w-11/12 text-center opacity-70 pb-5">Explore nearly 600 bachelor’s and master’s programs offered in English in Finland. Whether you&apos;re looking to boost your career or delve into research and doctoral studies, Finland provides a wide range of opportunities to help you expand your knowledge and pursue your academic goals.</div>
+            <section className="lg:w-2/3 lg:p-10 w-full text-white bg-gray-800 p-5 rounded-lg">
 
                 <h2 className="text-indigo-500">How to start?</h2>
                 <ul>
