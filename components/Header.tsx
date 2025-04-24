@@ -58,7 +58,7 @@ const Header = () => {
                     link: '/terms-of-service'
                 },
                 {
-                    link_title: 'Cookies settings',
+                    link_title: 'About website',
                     link: '/finland-overview'
                 }
             ]
@@ -72,7 +72,11 @@ const Header = () => {
         <div className="w-full flex flex-col items-center bg-black text-white">
             <div className="w-full bg-gray-900/70 flex relative items-center justify-center p-5 ">
                 <HamburgetIcon setHamburgerValue={setHamburgerValue} hamburgerValue={hamburgerValue} />
-                <Link href={'/'} onClick={() => setHamburgerValue(false)}><div className="font-bold header text-indigo-600">FinUnies</div> </Link>
+                <Link href={'/'} onClick={() => setHamburgerValue(false)}>
+                    <div className="font-bold header text-indigo-600">
+                        JOURNEY IN FINLAND
+                    </div>
+                </Link>
             </div>
             {hamburgerValue &&
                 <div className="w-full bg-gray-900 flex border-t border-gray-800 p-5">

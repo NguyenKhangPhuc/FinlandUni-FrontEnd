@@ -332,7 +332,7 @@ html {
 }
 
 .major_box {
-  @apply lg:max-w-7xl w-full max-w-5xl flex flex-col items-center bg-gray-800 p-2 rounded-lg shadow-lg mx-auto my-4 cursor-pointer hover:p-3 hover:bg-gray-900 duration-300
+  @apply lg:max-w-6xl w-full max-w-5xl flex flex-col items-center bg-gray-800 p-2 rounded-lg shadow-lg mx-auto my-4 cursor-pointer hover:p-3 hover:bg-gray-900 duration-300
 }
 
 .header_cell {

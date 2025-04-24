@@ -10,7 +10,7 @@ export default async function Home() {
   const universities = await getUniversities()
 
   return (
-    <div className="w-full bg-gray-900/30 flex flex-col items-center text-white mt-10 p-10">
+    <div className="w-full flex flex-col items-center text-white mt-10">
       <div
         className="header header-pop-up"
       >
