@@ -1,39 +1,18 @@
 [
     {
-        "id": "abo",
-        "name": "Åbo Akademi University",
-        "city": "Turku | Vaasa",
-        "overview": "Åbo Akademi University (ÅAU) is small enough for our professors to be easily accessible. At the same time, we offer a wide range of educational options. It means that you will be provided with individual guidance and the opportunity to tailor your studies for a unique degree. And, thanks to our networks of international contacts all over the world, you will be able to conduct part of your studies abroad.",
+        "id": "lapland",
+        "name": "University of Lapland",
+        "city": "Rovaniemi",
+        "overview": "The University of Lapland blends Arctic expertise with disciplines such as art and design, education, law, social sciences, and tourism research. It offers high-quality education supported by modern study facilities. With strategic priorities like responsible tourism and service design, the university fosters innovative interdisciplinary collaboration.",
         "ranking": "NA",
-        "tuition": "From €10 000 to €12 000 per year, depending on the programme",
-        "scholarship": "80% and 100%",
+        "tuition": "Tuition fee is 8000€, same for all ULapland Master-level programmes.",
+        "scholarship": "60%, 80% and 100%",
         "type": "Research University",
-        "website": "https://www.abo.fi/en/",
+        "website": "https://www.ulapland.fi/EN",
         "fieldOptions": [
-            "Health Sciences",
-            "Engineering",
-            "Law",
-            "Social Sciences",
-            "Education"
-        ]
-    },
-    {
-        "id": "jyu",
-        "name": "University of Jyväskylä",
-        "city": "Jyväskylä",
-        "overview": "In the international rankings of all universities in the world, the University of Jyväskylä is among the top 3% and represents the best of the world in several of its disciplines. We offer 20 master’s degree programmes in English. Our six faculties host over 14,000 students from 100 countries.",
-        "ranking": "NA",
-        "tuition": "From €8000 to €12 000 per year, depending on the programme",
-        "scholarship": "50%",
-        "type": "Research University",
-        "website": "https://www.jyu.fi/en",
-        "fieldOptions": [
-            "Business and Economics",
-            "Humanities and Social Sciences",
-            "Information Technology and Engineering",
-            "Mathematics and Sciences",
-            "Sport and Health Sciences",
-            "Education"
+            "Hospitality Management",
+            "Society",
+            "Arts"
         ]
     }
 ]
