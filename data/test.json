@@ -1,18 +1,18 @@
 [
     {
-        "id": "lapland",
-        "name": "University of Lapland",
-        "city": "Rovaniemi",
-        "overview": "The University of Lapland blends Arctic expertise with disciplines such as art and design, education, law, social sciences, and tourism research. It offers high-quality education supported by modern study facilities. With strategic priorities like responsible tourism and service design, the university fosters innovative interdisciplinary collaboration.",
+        "id": "vaasa",
+        "name": "University of Vaasa",
+        "city": "Vaasa",
+        "overview": "The University of Vaasa is one of Finland's most internationally diverse institutions. Our accredited business and technology programs draw students from across the globe. With a welcoming environment and high-quality education, we offer a strong foundation for your future success.",
         "ranking": "NA",
-        "tuition": "Tuition fee is 8000€, same for all ULapland Master-level programmes.",
-        "scholarship": "60%, 80% and 100%",
+        "tuition": "Tuition fees are 10,000€ and 14,000€",
+        "scholarship": "1000€, 2000€, 4000€, 5000€, 6000€",
         "type": "Research University",
-        "website": "https://www.ulapland.fi/EN",
+        "website": "https://www.uwasa.fi/en",
         "fieldOptions": [
-            "Hospitality Management",
-            "Society",
-            "Arts"
+            "Business and Economics",
+            "Technology and Engineering",
+            "Social Sciences"
         ]
     }
 ]
