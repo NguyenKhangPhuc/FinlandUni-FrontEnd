@@ -1,16 +1,19 @@
 [
     {
-        "id": "humak",
-        "name": "Humak University of Applied Sciences",
-        "city": "Helsinki",
-        "overview": "Humak University of Applied Sciences focuses on building expertise in adventure and outdoor education, youth and NGO work, workplace development, entrepreneurship in cultural management and the creative industries, as well as the interpreting field.",
+        "id": "lapland_uas",
+        "name": "Lapland University of Applied Sciences",
+        "city": "Rovaniemi",
+        "overview": "Lapland University of Applied Sciences is the northernmost university of applied sciences in the EU. It provides high-quality BBA and MBA education in modern, cutting-edge learning environments. Lapland UAS is international and multidisciplinary, with a strong focus on practical, work-based learning in close cooperation with businesses.",
         "ranking": "NA",
-        "tuition": "Tuition fee is 14000€",
-        "scholarship": "20%, 30%, 1000€",
+        "tuition": "Tuition fee is 9500€",
+        "scholarship": "20%, 30%, 50%, 1500€, 3000€, 4750€",
         "type": "UAS",
-        "website": "https://www.humak.fi/en/",
+        "website": "https://lapinamk.fi/en/homepage/",
         "fieldOptions": [
-            "Humanities"
+            "Business Administration",
+            "Information Technology",
+            "Health Care",
+            "Hospitality Management"
         ]
     }
 ]
