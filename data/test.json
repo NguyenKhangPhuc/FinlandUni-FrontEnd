@@ -1,18 +1,20 @@
 [
     {
-        "id": "vaasa",
-        "name": "University of Vaasa",
-        "city": "Vaasa",
-        "overview": "The University of Vaasa is one of Finland's most internationally diverse institutions. Our accredited business and technology programs draw students from across the globe. With a welcoming environment and high-quality education, we offer a strong foundation for your future success.",
+        "id": "uniarts",
+        "name": "University of the Arts Helsinki",
+        "city": "Helsinki",
+        "overview": "The University of the Arts Helsinki (Uniarts Helsinki) offers Finland's top-level education in music, fine arts, theatre, and dance. It stands out internationally as a leader in arts education and research. Uniarts Helsinki is made up of three academies: the Academy of Fine Arts, the Sibelius Academy, and the Theatre Academy.",
         "ranking": "NA",
-        "tuition": "Tuition fees are 10,000€ and 14,000€",
-        "scholarship": "1000€, 2000€, 4000€, 5000€, 6000€",
+        "tuition": "From 1.8.2026 is 28 000€, in 2025 is 12 000€",
+        "scholarship": "50%",
         "type": "Research University",
-        "website": "https://www.uwasa.fi/en",
+        "website": "https://www.uniarts.fi/en/",
         "fieldOptions": [
-            "Business and Economics",
-            "Technology and Engineering",
-            "Social Sciences"
+            "Music",
+            "Fine Arts",
+            "Arts (Theatre and Drama)",
+            "Arts (Dance)",
+            "Arts (Art and Design)"
         ]
     }
 ]
