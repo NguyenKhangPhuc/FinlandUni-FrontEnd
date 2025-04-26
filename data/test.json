@@ -1,21 +1,20 @@
 [
     {
-        "id": "hamk",
-        "name": "Häme University of Applied Sciences HAMK",
-        "city": "Hämeenlinna",
-        "overview": "Häme University of Applied Sciences (HAMK) is a learning and research community of people driven to make a positive impact on the world. We are shaping the future of bioeconomy, health, education, business, design,and technology. Our presence spans across seven campuses, online, and internationally. ",
+        "id": "xamk",
+        "name": "South-Eastern Finland University of Applied Sciences",
+        "city": "Mikkeli",
+        "overview": "XAMK offers Bachelor’s and Master’s degree programmes, open UAS courses, global talent acquisition programmes, and Summer School courses. Research, Development, and Innovation (RDI) activities are a key part of XAMK’s regional and societal impact, with focus areas including Digital Economy, Sustainable Wellbeing, Logistics and Seafaring, as well as Forest, the Environment, and Energy. ",
         "ranking": "NA",
-        "tuition": "Tuition fee is €9 700 and €11  700",
-        "scholarship": "2500€, 600€, 3200€, 6500€",
+        "tuition": "Tuition fee is €10 700 and €13 500",
+        "scholarship": "10%, 20%, 25-35%, 200€, 5000€",
         "type": "Research University",
-        "website": "https://www.hamk.fi/en",
+        "website": "https://www.xamk.fi/en/",
         "fieldOptions": [
             "Business Administration",
             "Health Care",
             "Engineering",
-            "Society",
-            "Education",
-            "Arts and Design"
+            "Hospitality Management",
+            "Culture and Arts"
         ]
     }
 ]
