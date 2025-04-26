@@ -1,20 +1,19 @@
 [
     {
-        "id": "uniarts",
-        "name": "University of the Arts Helsinki",
-        "city": "Helsinki",
-        "overview": "The University of the Arts Helsinki (Uniarts Helsinki) offers Finland's top-level education in music, fine arts, theatre, and dance. It stands out internationally as a leader in arts education and research. Uniarts Helsinki is made up of three academies: the Academy of Fine Arts, the Sibelius Academy, and the Theatre Academy.",
+        "id": "samk",
+        "name": "Satakunta University of Applied Sciences",
+        "city": "Pori",
+        "overview": "SAMK is a multi-disciplinary and international higher education institution with over 7,400 students and nearly 550 employees. Located on the west coast of Finland, SAMK plays a key role in educating experts, driving development, promoting internationalisation, and encouraging entrepreneurship in the region.",
         "ranking": "NA",
-        "tuition": "From 1.8.2026 is 28 000€, in 2025 is 12 000€",
-        "scholarship": "50%",
+        "tuition": "From 9500€ to 10 500€",
+        "scholarship": "1500€, 3000€, 50%",
         "type": "Research University",
-        "website": "https://www.uniarts.fi/en/",
+        "website": "https://www.samk.fi/en/",
         "fieldOptions": [
-            "Music",
-            "Fine Arts",
-            "Arts (Theatre and Drama)",
-            "Arts (Dance)",
-            "Arts (Art and Design)"
+            "Business and Economics",
+            "Hospitality management",
+            "Health Care",
+            "Engineering"
         ]
     }
 ]
