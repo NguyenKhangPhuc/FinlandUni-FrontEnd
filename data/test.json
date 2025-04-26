@@ -1,17 +1,21 @@
 [
     {
-        "id": "diak",
-        "name": "Diaconia University of Applied Sciences",
-        "city": "Helsinki",
-        "overview": "Diaconia University of Applied Sciences (Diak) is a people-oriented university specialised in the fields of social work, health care, diaconia and interpreting. Our work helps people who experience inequality, poverty, loneliness and social exclusion. All our social innovations are inspired by human beings. We are experts on humanity driven by the ambition to build a more equitable world for everyone. Through our fruitful development work, we aim to make the world a good place for everyone. We believe in people. ",
+        "id": "hamk",
+        "name": "Häme University of Applied Sciences HAMK",
+        "city": "Hämeenlinna",
+        "overview": "Häme University of Applied Sciences (HAMK) is a learning and research community of people driven to make a positive impact on the world. We are shaping the future of bioeconomy, health, education, business, design,and technology. Our presence spans across seven campuses, online, and internationally. ",
         "ranking": "NA",
-        "tuition": "Tuition fee is €9.500",
-        "scholarship": "300€, 400€, 500€, 600€",
+        "tuition": "Tuition fee is €9 700 and €11  700",
+        "scholarship": "2500€, 600€, 3200€, 6500€",
         "type": "Research University",
-        "website": "https://www.diak.fi/en/",
+        "website": "https://www.hamk.fi/en",
         "fieldOptions": [
+            "Business Administration",
+            "Health Care",
+            "Engineering",
             "Society",
-            "Health Care"
+            "Education",
+            "Arts and Design"
         ]
     }
 ]
