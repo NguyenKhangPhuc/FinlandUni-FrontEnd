@@ -1,21 +1,16 @@
 [
     {
-        "id": "laurea",
-        "name": "Laurea University of Applied Sciences",
-        "city": "Vantaa",
-        "overview": "Laurea University of Applied Sciences operates six campuses in the Uusimaa region close to Helsinki. Its community includes around 9,900 students, 660 staff members, and 34,700 alumni. Laurea offers seven Bachelor's degree programs and five Master's degree programs taught in English. ",
+        "id": "humak",
+        "name": "Humak University of Applied Sciences",
+        "city": "Helsinki",
+        "overview": "Humak University of Applied Sciences focuses on building expertise in adventure and outdoor education, youth and NGO work, workplace development, entrepreneurship in cultural management and the creative industries, as well as the interpreting field.",
         "ranking": "NA",
-        "tuition": "Tuition fee is €9500 and €11 000",
-        "scholarship": "15%",
+        "tuition": "Tuition fee is 14000€",
+        "scholarship": "20%, 30%, 1000€",
         "type": "UAS",
-        "website": "https://www.laurea.fi/en/",
+        "website": "https://www.humak.fi/en/",
         "fieldOptions": [
-            "Business Administration",
-            "Health Care",
-            "Engineering",
-            "Social Services",
-            "Hospitality Management",
-            "Beauty and Cosmetics"
+            "Humanities"
         ]
     }
 ]
