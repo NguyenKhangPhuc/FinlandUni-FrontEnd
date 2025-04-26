@@ -1,19 +1,17 @@
 [
     {
-        "id": "samk",
-        "name": "Satakunta University of Applied Sciences",
-        "city": "Pori",
-        "overview": "SAMK is a multi-disciplinary and international higher education institution with over 7,400 students and nearly 550 employees. Located on the west coast of Finland, SAMK plays a key role in educating experts, driving development, promoting internationalisation, and encouraging entrepreneurship in the region.",
+        "id": "diak",
+        "name": "Diaconia University of Applied Sciences",
+        "city": "Helsinki",
+        "overview": "Diaconia University of Applied Sciences (Diak) is a people-oriented university specialised in the fields of social work, health care, diaconia and interpreting. Our work helps people who experience inequality, poverty, loneliness and social exclusion. All our social innovations are inspired by human beings. We are experts on humanity driven by the ambition to build a more equitable world for everyone. Through our fruitful development work, we aim to make the world a good place for everyone. We believe in people. ",
         "ranking": "NA",
-        "tuition": "From 9500€ to 10 500€",
-        "scholarship": "1500€, 3000€, 50%",
+        "tuition": "Tuition fee is €9.500",
+        "scholarship": "300€, 400€, 500€, 600€",
         "type": "Research University",
-        "website": "https://www.samk.fi/en/",
+        "website": "https://www.diak.fi/en/",
         "fieldOptions": [
-            "Business and Economics",
-            "Hospitality management",
-            "Health Care",
-            "Engineering"
+            "Society",
+            "Health Care"
         ]
     }
 ]
