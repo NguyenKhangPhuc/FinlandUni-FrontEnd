@@ -1,20 +1,21 @@
 [
     {
-        "id": "xamk",
-        "name": "South-Eastern Finland University of Applied Sciences",
-        "city": "Mikkeli",
-        "overview": "XAMK offers Bachelor’s and Master’s degree programmes, open UAS courses, global talent acquisition programmes, and Summer School courses. Research, Development, and Innovation (RDI) activities are a key part of XAMK’s regional and societal impact, with focus areas including Digital Economy, Sustainable Wellbeing, Logistics and Seafaring, as well as Forest, the Environment, and Energy. ",
+        "id": "laurea",
+        "name": "Laurea University of Applied Sciences",
+        "city": "Vantaa",
+        "overview": "Laurea University of Applied Sciences operates six campuses in the Uusimaa region close to Helsinki. Its community includes around 9,900 students, 660 staff members, and 34,700 alumni. Laurea offers seven Bachelor's degree programs and five Master's degree programs taught in English. ",
         "ranking": "NA",
-        "tuition": "Tuition fee is €10 700 and €13 500",
-        "scholarship": "10%, 20%, 25-35%, 200€, 5000€",
-        "type": "Research University",
-        "website": "https://www.xamk.fi/en/",
+        "tuition": "Tuition fee is €9500 and €11 000",
+        "scholarship": "15%",
+        "type": "UAS",
+        "website": "https://www.laurea.fi/en/",
         "fieldOptions": [
             "Business Administration",
             "Health Care",
             "Engineering",
+            "Social Services",
             "Hospitality Management",
-            "Culture and Arts"
+            "Beauty and Cosmetics"
         ]
     }
 ]
