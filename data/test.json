@@ -1,14 +1,14 @@
 [
     {
-        "id": "seamk",
-        "name": "Seinäjoki University of Applied Sciences SeAMK",
-        "city": "Seinäjoki",
-        "overview": "SeAMK – Seinäjoki University of Applied Sciences is situated in the rapidly growing city of Seinäjoki. It supports the development of future professionals by offering higher education across six different fields. Seven of its degree programmes are fully taught in English.",
+        "id": "savonia",
+        "name": "Savonia University of Applied Sciences",
+        "city": "Kuopio",
+        "overview": "Savonia is among the largest and most diverse universities of applied sciences in Finland. Study in a modern, international environment that encourages your career goals and lifelong learning. At Savonia, you define your own boundaries. Our campuses are located in Kuopio, Iisalmi, and Varkaus.",
         "ranking": "NA",
-        "tuition": "Tuition fee is 9500€ or 11 500€",
-        "scholarship": "10%, 2000€, 2500€, 3000€",
+        "tuition": "Tuition fee is 9700€ or 10 500€",
+        "scholarship": "10%, 20%, 30%",
         "type": "UAS",
-        "website": "https://www.seamk.fi/en/",
+        "website": "https://www.savonia.fi/en/homepage/",
         "fieldOptions": [
             "Business Administration",
             "Engineering",
