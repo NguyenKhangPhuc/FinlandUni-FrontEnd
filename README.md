@@ -1,3 +1,5 @@
+Install all the dependencies with npm install!
+Remember to do the same with FinUni-Server!
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
