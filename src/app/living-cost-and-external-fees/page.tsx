@@ -10,7 +10,7 @@ export default function Home() {
                 <ul>
                     <li>Students from outside the EU/EEA are required to pay tuition fees for bachelor’s and master’s degree programs taught in English.</li>
                     <li>
-                        These fees typically range between €8,000 and €20,000 per year, depending on the university and the specific program. For exact tuition costs, it&apos;s best to check on <a href="https://opintopolku.fi/konfo/en/" className="underline text-blue-500">
+                        These fees typically range between €5,000 and €30,000 per year, depending on the university and the specific program. For exact tuition costs, it&apos;s best to check on <a href="https://opintopolku.fi/konfo/en/" className="underline text-blue-500">
                             Studyinfo.fi
                         </a> or consult the website of the university you&apos;re applying to.
                     </li>
@@ -29,7 +29,7 @@ export default function Home() {
 
                 <h2 className="text-indigo-500">Student Union Fees</h2>
                 <ul>
-                    <li>Students enrolled in universities typically pay a yearly student union fee ranging from €50 to €70, which gives them access to various benefits such as discounts on meals at student cafeterias and reduced fares on public transportation.</li>
+                    <li>Students enrolled in universities typically pay a yearly student union fee ranging around €50, which gives them access to various benefits such as discounts on meals at student cafeterias and reduced fares on public transportation.</li>
                     <li>At universities of applied sciences (UAS), joining the student union is optional.</li>
                     <li>Your university in Finland can offer guidance on student union fees, healthcare contributions, and other important practical matters.</li>
                 </ul>
@@ -37,7 +37,7 @@ export default function Home() {
                 <h2 className="text-indigo-500">Student Healthcare Fee</h2>
                 <ul>
                     <li>
-                        If you&apos;re pursuing a bachelor’s or master’s degree, you&apos;ll need to pay a <a href="https://www.kela.fi/faq-about-the-healthcare-fee-in-higher-education" className="underline text-blue-500">student healthcare fee</a> to access services provided by the <a href="https://www.yths.fi/en/frontpage/" className="underline text-blue-500">Finnish Student Health Service (FSHS)</a>. This fee is currently around €35 per semester, totaling approximately €70 per academic year.
+                        If you&apos;re pursuing a bachelor’s or master’s degree, you&apos;ll need to pay a <a href="https://www.kela.fi/faq-about-the-healthcare-fee-in-higher-education" className="underline text-blue-500">student healthcare fee</a> to access services provided by the <a href="https://www.yths.fi/en/frontpage/" className="underline text-blue-500">Finnish Student Health Service (FSHS)</a>. This fee is currently around €35.6 per semester, totaling approximately €71.2 per academic year.
 
                     </li>
                 </ul>
