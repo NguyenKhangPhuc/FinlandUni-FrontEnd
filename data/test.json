@@ -1,17 +1,17 @@
 [
     {
-        "id": "lapland_uas",
-        "name": "Lapland University of Applied Sciences",
-        "city": "Rovaniemi",
-        "overview": "Lapland University of Applied Sciences is the northernmost university of applied sciences in the EU. It provides high-quality BBA and MBA education in modern, cutting-edge learning environments. Lapland UAS is international and multidisciplinary, with a strong focus on practical, work-based learning in close cooperation with businesses.",
+        "id": "seamk",
+        "name": "Seinäjoki University of Applied Sciences SeAMK",
+        "city": "Seinäjoki",
+        "overview": "SeAMK – Seinäjoki University of Applied Sciences is situated in the rapidly growing city of Seinäjoki. It supports the development of future professionals by offering higher education across six different fields. Seven of its degree programmes are fully taught in English.",
         "ranking": "NA",
-        "tuition": "Tuition fee is 9500€",
-        "scholarship": "20%, 30%, 50%, 1500€, 3000€, 4750€",
+        "tuition": "Tuition fee is 9500€ or 11 500€",
+        "scholarship": "10%, 2000€, 2500€, 3000€",
         "type": "UAS",
-        "website": "https://lapinamk.fi/en/homepage/",
+        "website": "https://www.seamk.fi/en/",
         "fieldOptions": [
             "Business Administration",
-            "Information Technology",
+            "Engineering",
             "Health Care",
             "Hospitality Management"
         ]
