@@ -2,9 +2,9 @@ export default function Home() {
     ///Contain design and content of accomodation page.
     return (
         <div className="w-full flex flex-col items-center text-white mt-10">
-            <div className="header w-full text-center">Living cost and external fees in Finland</div>
+            <div className="header w-full text-center">Accomodation</div>
             <div className="w-2/3 text-center opacity-70 pb-5">Finding a Home in Finland: Start Early, Stay Ready!</div>
-            <section className="w-2/3 text-white bg-gray-800 p-10 rounded-lg">
+            <section className="lg:w-2/3 lg:p-10 w-full text-white bg-gray-800 p-10 rounded-lg">
 
                 <h2 className="text-indigo-500">Student Housing in Finland</h2>
                 <ul>
