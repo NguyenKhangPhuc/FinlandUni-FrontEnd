@@ -62,7 +62,7 @@ jobs:
           token: ${{ secrets.YOUR_VERCEL_TOKEN }}
           org-id: ${{ secrets.YOUR_VERCEL_ORG_ID }}
           project-id: ${{ secrets.YOUR_VERCEL_PROJECT_ID }}
-          production: ${{ github.ref == 'refs/heads/main' }}
+          production: ${{ github.ref == 'refs/heads/master' }}
   tag_release:
     needs: [deploy]
     if: ${{ github.event_name == 'push' && !contains(github.event.head_commit.message, '#skip') }}
