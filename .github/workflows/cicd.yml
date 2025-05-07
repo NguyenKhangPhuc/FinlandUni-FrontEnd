@@ -9,7 +9,7 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  unit_test_and_linting_test_and_buiding:
+  unit_test_and_linting_test:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -44,3 +44,24 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+  deploy:
+    needs: [simple_deployment_pipeline, playwright_test]
+    if: ${{ github.event_name == 'push' && !contains(github.event.head_commit.message, '#skip') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      statuses: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: nexterias/actions-vercel@v1
+        with:
+          token: ${{ secrets.YOUR_VERCEL_TOKEN }}
+          org-id: ${{ secrets.YOUR_VERCEL_ORG_ID }}
+          project-id: ${{ secrets.YOUR_VERCEL_PROJECT_ID }}
+          production: ${{ github.ref == 'refs/heads/main' }}
+          prebuilt: true # If set to true, build will be performed using GitHub Actions.
+      
