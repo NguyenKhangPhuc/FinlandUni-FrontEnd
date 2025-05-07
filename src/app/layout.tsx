@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Suspense } from "react";
 
 
 const roboto = Roboto({ subsets: ['latin'] })
@@ -25,7 +26,7 @@ export default function RootLayout({
         className={`${roboto.className} flex flex-col min-h-screen bg-black`}
       >
         <Header />
-        <main className="flex-grow">{children}</main>
+        <Suspense><main className="flex-grow">{children}</main></Suspense>
         <Footer />
       </body>
     </html>
