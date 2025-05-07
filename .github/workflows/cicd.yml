@@ -9,7 +9,7 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  unit_test_and_linting_test:
+  unit_test_and_linting_test_and_buiding:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -20,6 +20,8 @@ jobs:
         run: npm install
       - name: Checking linting
         run: npm run lint
+      - name: Building
+        run: npm run build
       - name: Checking unit test with jest
         run: npm run test
   e2e_playwright_test:
