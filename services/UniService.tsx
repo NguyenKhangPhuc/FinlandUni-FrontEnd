@@ -1,7 +1,7 @@
 import axios from "axios"
 import { Major, University } from "../types/universities";
 
-const url: string = 'http://localhost:3005/api'
+const url: string = 'https://finlanduni-server.onrender.com/api'
 
 
 export const getUniversities = async (): Promise<Array<University>> => {
