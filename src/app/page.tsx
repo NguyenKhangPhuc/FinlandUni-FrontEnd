@@ -1,5 +1,6 @@
 
 import ListUni from "../../components/ListUni";
+import Loader from "../../components/Loader";
 import { getUniversities } from "../../services/UniService";
 
 
@@ -8,7 +9,14 @@ export default async function Home() {
   ///Show the header for the universities list page
   ///Show the list of universities by a component 'ListUni'
   const universities = await getUniversities()
-
+  if (!universities) {
+    return (
+      <div className="w-full flex flex-col items-center justify-center mt-20">
+        <Loader />
+        <div className="text-white">Loading content...</div>
+      </div>
+    )
+  }
   return (
     <div className="w-full flex flex-col items-center text-white mt-10">
       <div

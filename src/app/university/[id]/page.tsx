@@ -1,5 +1,6 @@
 
 
+import Loader from "../../../../components/Loader"
 import Majors from "../../../../components/Majors"
 import { getMajorsByUni, getUniversityById } from "../../../../services/UniService"
 
@@ -10,7 +11,14 @@ export default async function UniversityDetails({ params }: { params: { id: stri
     const { id } = await params
     const university = await getUniversityById(id)
     const majors = await getMajorsByUni(id)
-
+    if (!majors || !university) {
+        return (
+            <div className="w-full flex flex-col items-center justify-center mt-20">
+                <Loader />
+                <div className="text-white">Loading content...</div>
+            </div>
+        )
+    }
     return (
         <div className="w-full flex flex-col items-center">
             <div className="header p-3 text-indigo-500">{university?.name}</div>
