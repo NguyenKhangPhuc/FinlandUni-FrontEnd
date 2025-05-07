@@ -9,7 +9,7 @@ export default async function Home() {
   ///Show the header for the universities list page
   ///Show the list of universities by a component 'ListUni'
   const universities = await getUniversities()
-  if (!universities) {
+  if (!universities || universities.length == 0) {
     return (
       <div className="w-full flex flex-col items-center justify-center mt-20">
         <Loader />

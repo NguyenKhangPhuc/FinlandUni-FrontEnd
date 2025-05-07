@@ -72,7 +72,7 @@ const DropDownFilter = ({ options, handleFilter, kind }: Props) => {
 
                 <MenuItems
                     transition
-                    className={`${options.length > 6 && 'max-h-[400px] overflow-y-scroll'}  absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`}
+                    className={`${options.length > 6 && 'max-h-[400px] overflow-y-scroll'} sm:w-40 lg:w-56 w-30 absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`}
                 >
                     <div className="py-1">
                         {options.map(d => {

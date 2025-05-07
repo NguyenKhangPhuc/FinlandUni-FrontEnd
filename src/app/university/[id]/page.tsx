@@ -11,7 +11,7 @@ export default async function UniversityDetails({ params }: { params: Promise<{ 
     const { id } = await params
     const university = await getUniversityById(id)
     const majors = await getMajorsByUni(id)
-    if (!majors || !university) {
+    if (!majors || !university || majors.length == 0) {
         return (
             <div className="w-full flex flex-col items-center justify-center mt-20">
                 <Loader />
@@ -29,7 +29,7 @@ export default async function UniversityDetails({ params }: { params: Promise<{ 
                 <div className="text-center">Scholarship: {university?.scholarship}</div>
             </div>
             <div className="header p-5 text-white">Overview</div>
-            <div className="lg:w-1/2 w-full  text-white p-5 bg-gray-800 rounded-lg">{university?.overview}</div>
+            <div className="lg:w-1/2 w-full text-center text-white p-5 bg-gray-800 rounded-lg">{university?.overview}</div>
             <div className="header p-5 text-white">Majors</div>
             <Majors majors={majors} id={id} fieldOptions={university?.fieldOptions} />
         </div>
