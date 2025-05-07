@@ -47,15 +47,16 @@ const ListUni = ({ universities }: { universities: Array<University> }) => {
                 <DropDownFilter options={uniField} handleFilter={handleUniFieldType} kind="Field" />
                 <DropDownFilter options={uniTypes} handleFilter={handleUniTypeChange} kind="University" />
             </div>
-            {paginatedUniversities?.map((university, index) => {
+            {paginatedUniversities?.map((item, index) => {
                 return (
                     <UniversityPart
-                        university={'name' in university ? university : undefined}
+                        university={'name' in item ? item : undefined}
                         handleExtend={handleExtend}
                         isOpen={isOpen}
                         index={index}
                         uniIndex={uniIndex}
                         key={`university ${index}`}
+                        testid={`${'id' in item ? item.id : undefined}`}
                     />
                 )
             })}
